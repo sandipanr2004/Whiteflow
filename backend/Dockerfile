@@ -12,4 +12,4 @@ RUN ./mvnw install -DskipTests
 FROM eclipse-temurin:21-jre-alpine
 VOLUME /tmp
 COPY --from=build /workspace/app/target/*.jar app.jar
-ENTRYPOINT ["java","-jar","/app.jar"]
+ENTRYPOINT ["java","-Xms256m","-Xmx256m","-jar","/app.jar"]
