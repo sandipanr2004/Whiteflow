@@ -437,7 +437,7 @@ export default function AuthSwitch({ onSuccess }) {
                 <input type="password" placeholder="Password" />
               </div>
               <div style={{ margin: "10px 0" }}>
-                <Turnstile siteKey={import.meta.env.VITE_TURNSTILE_SITE_KEY || "1x00000000000000000000AA"} onSuccess={setLoginToken} />
+                <Turnstile siteKey={import.meta.env.VITE_TURNSTILE_SITE_KEY || "0x4AAAAAADzpy6a_GsD8Nb4k"} onSuccess={setLoginToken} />
               </div>
               <input type="submit" value="Login" className="btn solid" disabled={!loginToken} />
               <p className="social-text">Or sign in with social platforms</p>
@@ -478,7 +478,7 @@ export default function AuthSwitch({ onSuccess }) {
                 <input type="password" placeholder="Password" />
               </div>
               <div style={{ margin: "10px 0" }}>
-                <Turnstile siteKey={import.meta.env.VITE_TURNSTILE_SITE_KEY || "1x00000000000000000000AA"} onSuccess={setSignupToken} />
+                <Turnstile siteKey={import.meta.env.VITE_TURNSTILE_SITE_KEY || "0x4AAAAAADzpy6a_GsD8Nb4k"} onSuccess={setSignupToken} />
               </div>
               <input type="submit" value="Sign up" className="btn" disabled={!signupToken} />
               <p className="social-text">Or sign up with social platforms</p>
