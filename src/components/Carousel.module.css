@@ -1,0 +1,126 @@
+.wrapper {
+  display: flex;
+  height: 100%;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.carouselContainer {
+  position: relative;
+  width: 100%;
+  max-width: 64rem; /* max-w-4xl */
+  padding-left: 1.25rem; /* px-5 */
+  padding-right: 1.25rem;
+  margin: 0 auto;
+}
+
+.swiperWrapper {
+  width: 100%;
+}
+
+.image {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  border-radius: 1rem;
+}
+
+.navContainer {
+  /* navigation container */
+}
+
+.navPrev, .navNext {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 10;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50%;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.navPrev {
+  left: 1rem;
+}
+
+.navNext {
+  right: 1rem;
+}
+
+.navIcon {
+  height: 1.5rem;
+  width: 1.5rem;
+  color: white;
+}
+
+/* Swiper overrides from snippet */
+.Carousal_003 {
+  width: 100%;
+  padding-bottom: 50px !important;
+  /* Adjust height based on viewport size */
+  height: 400px;
+}
+
+@media (min-width: 768px) {
+  .Carousal_003 {
+    height: 500px;
+  }
+}
+
+.Carousal_003 .swiper-slide {
+  background-position: center;
+  background-size: cover;
+  width: 280px;
+}
+
+@media (min-width: 768px) {
+  .Carousal_003 .swiper-slide {
+    width: 350px;
+  }
+}
+
+.swiper-pagination-bullet {
+  background-color: #000 !important;
+}
+
+.slideContent {
+  position: relative;
+  height: 100%;
+  width: 100%;
+  border-radius: 1rem;
+  overflow: hidden;
+}
+
+.slideOverlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 2rem 1.5rem 1.5rem;
+  background: linear-gradient(to top, rgba(0,0,0,0.8) 0%, transparent 100%);
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.slideTitle {
+  color: white;
+  font-family: var(--font-anton);
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  margin: 0;
+}
+
+.slideDesc {
+  color: rgba(255, 255, 255, 0.9);
+  font-family: var(--font-satoshi);
+  font-size: 0.875rem;
+  margin: 0;
+}

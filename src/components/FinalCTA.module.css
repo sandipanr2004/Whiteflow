@@ -1,0 +1,99 @@
+.section {
+  position: relative;
+  background-color: var(--color-yellow);
+  padding: 12rem 2rem;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.bgText {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-family: var(--font-anton);
+  font-size: 25vw;
+  line-height: 0.8;
+  color: var(--color-charcoal);
+  opacity: 0.05;
+  white-space: nowrap;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.content {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  max-width: 48rem; /* max-w-2xl approx 42rem, making it slightly larger here */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+}
+
+.title {
+  font-family: var(--font-anton);
+  font-size: clamp(4rem, 8vw, 8rem); /* 8xl approx */
+  line-height: 0.9;
+  text-transform: uppercase;
+  color: var(--color-charcoal);
+}
+
+.subtitle {
+  font-family: var(--font-satoshi);
+  font-size: 1.5rem; /* 2xl approx */
+  color: rgba(23, 30, 25, 0.8);
+  max-width: 42rem;
+  margin: 0 auto;
+}
+
+.form {
+  display: flex;
+  gap: 1rem;
+  width: 100%;
+  max-width: 32rem;
+  margin-top: 1rem;
+}
+
+@media (max-width: 640px) {
+  .form {
+    flex-direction: column;
+  }
+}
+
+.input {
+  flex: 1;
+  padding: 1.25rem 1.5rem;
+  font-family: var(--font-satoshi);
+  font-size: 1.125rem;
+  border: 2px solid var(--color-charcoal);
+  border-radius: 0.5rem;
+  background-color: var(--color-white);
+  outline: none;
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+}
+
+.input:focus {
+  border-color: var(--color-dark);
+}
+
+.button {
+  background-color: var(--color-charcoal);
+  color: var(--color-white);
+  font-family: var(--font-anton);
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  padding: 1.25rem 2.5rem;
+  border: none;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+  transition: transform var(--transition-duration) var(--transition-bezier);
+}
+
+.button:hover {
+  transform: scale(1.05);
+}

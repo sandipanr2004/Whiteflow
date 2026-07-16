@@ -1,0 +1,142 @@
+.container {
+  width: 100%;
+  padding: 6rem 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: transparent;
+  overflow: hidden;
+}
+
+.carouselWrapper {
+  width: 100%;
+  height: 200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+}
+
+.rulerContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.rulerLinesWrapper {
+  position: relative;
+  width: 100%;
+  height: 2rem;
+  padding: 0 1rem;
+}
+
+.line {
+  position: absolute;
+  width: 2px;
+  background-color: #4b5563;
+}
+.lineCenter {
+  height: 2rem;
+  background-color: var(--color-charcoal);
+}
+.lineFifth {
+  height: 1rem;
+  background-color: var(--color-charcoal);
+}
+.lineNormal {
+  height: 0.75rem;
+}
+.lineTop {
+  top: 0;
+}
+.lineBottom {
+  bottom: 0;
+}
+
+.viewport {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+}
+
+.track {
+  display: flex;
+  align-items: center;
+  gap: 100px;
+}
+
+.item {
+  font-size: 2.25rem;
+  font-weight: 700;
+  white-space: nowrap;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-anton);
+  text-transform: uppercase;
+  width: 400px;
+  border: none;
+  background: transparent;
+  padding: 0;
+  outline: none;
+}
+@media (min-width: 768px) {
+  .item {
+    font-size: 3.75rem;
+  }
+}
+
+.itemActive {
+  color: var(--color-charcoal);
+}
+.itemInactive {
+  color: #9ca3af;
+}
+.itemInactive:hover {
+  color: #d1d5db;
+}
+
+.controls {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 2.5rem;
+}
+
+.controlButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  background: none;
+  border: none;
+  padding: 0.5rem;
+  color: var(--color-charcoal);
+}
+.controlButton:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.pagination {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.pageCurrent, .pageTotal {
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: #9ca3af;
+}
+.pageSeparator {
+  font-size: 0.875rem;
+  color: #6b7280;
+}
