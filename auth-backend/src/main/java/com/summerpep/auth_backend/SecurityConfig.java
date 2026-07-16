@@ -4,6 +4,7 @@ import jakarta.servlet.ServletException;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
@@ -29,6 +30,9 @@ public class SecurityConfig {
 
     @Autowired
     private JwtUtil jwtUtil;
+
+    @Value("${FRONTEND_URL:http://localhost:5173}")
+    private String frontendUrl;
 
     @Bean
     public SecurityFilterChain filterChain(HttpSecurity http) throws Exception {
@@ -84,6 +88,6 @@ public class SecurityConfig {
         String token = jwtUtil.generateToken(username);
         
         // Redirect to React frontend
-        response.sendRedirect("http://localhost:5173/oauth2/redirect?token=" + token + "&username=" + username);
+        response.sendRedirect(frontendUrl + "/oauth2/redirect?token=" + token + "&username=" + username);
     }
 }
